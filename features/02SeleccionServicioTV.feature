@@ -12,9 +12,12 @@ Feature: Inicio de Sesion con Datos Validos
     When Seleccionar Cobertura: "<Cobertura>" se confirma plan
     When Se Realiza click en continuar
     When Seleccionar Fecha y horario Disponible
-    Then Confirmar contratacion, Elegir metodo de Pago "<Pago>" ingresar Rut "<Rut>" ingresar "<Serie>"
-#    When Se visualiza Ventana Patpass, se completan los campos Numero de Tarjeta: "<Tarjeta>" y Ciudad "<Ciudad>"
-##    When Se tilda la casilla "Acepto terminos y condiciones" , se realiza click Continuar.
+    When Confirmar contratacion, Elegir metodo de Pago "<Pago>" ingresar Rut "<Rut>" ingresar "<Serie>"
+    When Se visualiza Ventana Patpass, se completan los campos Numero de Tarjeta: "<Tar>" y Ciudad
+    When Se visualiza Pantalla Transbank se Completa Rut: "<RutPago>" y  Clave: "<Clave>"
+    When Se tilda la casilla "Acepto terminos y condiciones" , se realiza click Continuar.
+    Then Se valida la obtencion del id de la solicitud realizada
+
     Examples:
-      | Web                              | Region        | Comuna     | Calle           | Numero | Nombre          | Contacto  | Email         | Ciudad | Cobertura                  | Pago                  | Rut          | Serie | TestCase | Tarejta |  |
-      | /television-entretenido-max.html | METROPOLITANA | LAS CONDES | CERRO PROVINCIA | 125    | ELLIOT LEOPOLDO | 957544722 | test@test.com |        | Television Entretenido max | Pago Automático (PAT) | 36.628.878-3 | XXXX  | GB1      |         |  |
+      | Web                              | Region        | Comuna     | Calle           | Numero | Nombre          | Contacto  | Email         | Ciudad | Cobertura                  | Pago                  | Rut          | Serie | TestCase | Tar                 | Clave | RutPago      |
+      | /television-entretenido-max.html | METROPOLITANA | LAS CONDES | CERRO PROVINCIA | 125    | ELLIOT LEOPOLDO | 957544722 | test@test.com |        | Television Entretenido max | Pago Automático (PAT) | 36.628.878-3 | XXXX  | GB1      | 4051-8856-0044-6623 | 123   | 11.111.111-1 |

@@ -1,7 +1,6 @@
-import os
 import csv
+import os
 from lxml import etree
-from selenium.webdriver.common.by import By
 
 
 # with open('./txt/ABMORGANISMO.csv') as csvfile:
@@ -14,11 +13,11 @@ class CreateWriterRead():
         self.driver = driver
 
 
-    def CrearDocumento(self, NombreDoc, NombreColumna, Xpath):
+    def CrearDocumento(self, NombreDoc, NombreColumna, tipo,Xpath):
         dir_path = r"./"
         file_name = f"{NombreDoc}.csv"
         file_path = os.path.join(dir_path, file_name)
-        element = self.driver.find_elemet(By.XPATH, Xpath)
+        element = self.driver.find_elemet(tipo, Xpath)
         texto = element.text
 
         if not os.path.exists(file_path):

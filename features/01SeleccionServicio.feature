@@ -1,6 +1,6 @@
 Feature: Solicitud Servicio
 
-  Scenario Outline: Solicitud Servicio
+  Scenario Outline: Solicitud Servicio "<TestCase>"
     Given  Iniciando Navegador en la Web : "<Web>"
     When Se selecciona region: "<Region>"
     When Se selecciona Comuna: "<Comuna>

@@ -6,17 +6,15 @@ from pages.SeleccionServicioPage import SeleccionServicio
 @when(u'Seleccionar Cobertura: "{Cobertura}" se confirma plan')
 def stem_impl(context, Cobertura):
     try:
-        SeleccionServicio.ContinuarCoberturaTV(Cobertura)
-    except TimeoutError:
-
+        SeleccionServicio.ContinuarCoberturaTV(context,Cobertura)
+    except:
         context.driver.close()
-        step.failed("La prueba fallo en : ----->>> Seleccionar Cobertura:  se confirma plan")
+        assert False, "La prueba fallo en : ----->>> Seleccionar Cobertura:  se confirma plan"
 
 @when(u'Se Realiza click en continuar')
 def step_impl(context):
     try:
-        SeleccionServicio.ContinuarServicioTV()
-    except TimeoutError:
-
+        SeleccionServicio.ContinuarServicioTV(context)
+    except:
         context.driver.close()
-        step.failed("La prueba fallo en: ----->>> Realizar Click Continuar")
+        assert False, "La prueba fallo en: ----->>> Realizar Click Continuar"

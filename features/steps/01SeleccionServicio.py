@@ -1,8 +1,7 @@
 from behave import *
-
 from pages.SeleccionServicioPage import SeleccionServicio
 
-from selenium.common.exceptions import TimeoutException
+
 
 @given(u'Iniciando Navegador en la Web : "{Web}"')
 def step_impl(context, Web):
@@ -124,7 +123,6 @@ def step_impl(context, Tar):
     try:
         SeleccionServicio.PatPass(context,Tar)
     except:
-
         context.driver.close()
         assert False, "La prueba fallo en :  ----->>> Confirmar contratacionRut"
     
