@@ -10,8 +10,8 @@ if __name__ == '__main__':
 
     a = p.parse_args()
 
-    t01 = "01SeleccionServicio.feature"
-    t02 = "02SeleccionServicioTV.feature"
+    t01 = ""
+    t02 = ""
     t03 = ""
 
     # testdir = f"C:\\proyectos\\Turnera\\turnera-backend-administracion\\TestAutomation\\features\\{t03}"  # PUEDES INDICAR EL SCRIPT A EJECUTAR

@@ -81,11 +81,15 @@ class funciones_2_0:
         ###################################################################################
 
     def input_Texto_ActionChains(self, tipo, selector, texto):
-        action = ActionChains(self.driver)
-        val = self.driver.find_element(tipo, selector, texto)
-        action.click(val).perform()
-        action.send_keys(texto).perform()
-        time.sleep(1)
+       try:
+            action = ActionChains(self.driver)
+            val = self.driver.find_element(tipo, selector, texto)
+            action.click(val).perform()
+            action.send_keys(texto).perform()
+            time.sleep(1)
+       except Exception as ex:
+           print(ex)
+
 
     def clickAction(self, tipo, selector):
         action = ActionChains(self.driver)

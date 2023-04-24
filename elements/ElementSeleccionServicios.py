@@ -9,6 +9,7 @@ NombreApellido = "//input[contains(@id,'name')]"
 Telefono = "(//input[@name='phone'][@data-bind='textInput: phone, event: {input: changeOnStep}'])[1]"
 CorreoElectronico = "//input[contains(@id,'hiring')]"
 ValidarDatos = "//p[contains(.,'Validar Datos')]"
+RutServicio="//input[@id='rut']"
 
 #########Seleccion Plan e Interes #########
 
