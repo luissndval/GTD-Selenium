@@ -146,6 +146,7 @@ def step_impl(context):
 def step_impl(context):
     try:
         SeleccionServicio.ValidarSolicitud(context, )
+        SeleccionServicio.AlmacenamientoId(context)
         context.driver.close()
     except:
         funciones_2_0.screenShot(context,'Se valida la obtencion del id de la solicitud realizada')

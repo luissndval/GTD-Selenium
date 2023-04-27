@@ -14,7 +14,7 @@ class CreateWriterRead():
 
 
     def CrearDocumento(self, NombreDoc, NombreColumna, tipo,Xpath):
-        dir_path = r"./"
+        dir_path = r"../txt/"
         file_name = f"{NombreDoc}.csv"
         file_path = os.path.join(dir_path, file_name)
         element = self.driver.find_elemet(tipo, Xpath)

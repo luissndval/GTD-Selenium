@@ -45,3 +45,5 @@ PatPassSuscribir="//input[@id='formulario:suscribirStep3']"
 validate="//h1[contains(@class,'page-title')]"
 IDValidateGTD="//div[@class='id-orden']"
 
+###############TELEFONO#################
+TelefonoTELSUR="(//input[@placeholder='Ingresa tu teléfono'])[2]"
