@@ -52,7 +52,7 @@ class funciones_2_0:
         print("Página abierta: " + str(link))
 
     def input_Texto(self, tipo, selector, texto):
-        WebDriverWait(self.driver, timeout=5).until(EC.visibility_of_element_located((tipo, selector))).send_keys(texto)
+        WebDriverWait(self.driver, timeout=10).until(EC.visibility_of_element_located((tipo, selector))).send_keys(texto)
         time.sleep(1)
         print("\n Escribir en el campo {} el texto -> {} ".format(selector, texto))
 
@@ -62,11 +62,11 @@ class funciones_2_0:
         print("\n Click sobre el elemento -> {} ".format(selector))
 
     def clear_Field(self, tipo, selector):
-        WebDriverWait(self.driver, timeout=5).until(EC.element_to_be_clickable((tipo, selector))).clear()
+        WebDriverWait(self.driver, timeout=10).until(EC.element_to_be_clickable((tipo, selector))).clear()
         print("\n Texto eliminado -> {} ".format(selector))
 
     def validates(self, tipo, selector):
-        element = WebDriverWait(self.driver, timeout=5).until(EC.presence_of_element_located((tipo, selector))).text
+        element = WebDriverWait(self.driver, timeout=10).until(EC.presence_of_element_located((tipo, selector))).text
         print(element)
         print("\n Elemento Validado -> {} ".format(selector))
 
@@ -127,22 +127,22 @@ class funciones_2_0:
     ############################################################################################
 
     def input_Texto_visibility(self, tipo, selector, texto):
-        WebDriverWait(self.driver, timeout=5).until(EC.visibility_of_element_located((tipo, selector))).send_keys(
+        WebDriverWait(self.driver, timeout=10).until(EC.visibility_of_element_located((tipo, selector))).send_keys(
             texto)
         time.sleep(1)
         print("\n Escribir en el campo {} el texto -> {} ".format(selector, texto))
 
     def click_Field_visibility(self, tipo, selector):
-        WebDriverWait(self.driver, timeout=5).until(EC.visibility_of_element_located((tipo, selector))).click()
+        WebDriverWait(self.driver, timeout=10).until(EC.visibility_of_element_located((tipo, selector))).click()
         time.sleep(2)
         print("\n Click sobre el elemento -> {} ".format(selector))
 
     def clear_Field_visibility(self, tipo, selector):
-        WebDriverWait(self.driver, timeout=5).until(EC.visibility_of_element_located((tipo, selector))).clear()
+        WebDriverWait(self.driver, timeout=10).until(EC.visibility_of_element_located((tipo, selector))).clear()
         print("\n Texto eliminado -> {} ".format(selector))
 
     def validates_visibility(self, tipo, selector):
-        element = WebDriverWait(self.driver, timeout=5).until(
+        element = WebDriverWait(self.driver, timeout=10).until(
             EC.visibility_of_element_located((tipo, selector))).text
         print(element)
         print("\n Elemento Validado -> {} ".format(selector))
@@ -176,7 +176,7 @@ class funciones_2_0:
     #     dir_path = r"../txt"
     #     file_name = NombreDoc
     #     file_path = os.path.join(dir_path, file_name)
-    #     texto = WebDriverWait(self.driver, timeout=5).until(
+    #     texto = WebDriverWait(self.driver, timeout=10).until(
     #         EC.visibility_of_element_located((tipo, selector))).text
     #     try:
     #         Validate = os.path.exists(NombreDoc)
@@ -202,7 +202,7 @@ class funciones_2_0:
     #     dir_path = r"../txt"
     #     file_name = NombreDoc
     #     file_path = os.path.join(dir_path, file_name)
-    #     Capturado = WebDriverWait(self.driver, timeout=5).until(EC.visibility_of_element_located((tipo, selector))).text
+    #     Capturado = WebDriverWait(self.driver, timeout=10).until(EC.visibility_of_element_located((tipo, selector))).text
     #     print(Capturado)
     #     try:
     #         Validate = os.path.exists(dir_path)
@@ -226,7 +226,7 @@ class funciones_2_0:
 
     def CrearDocumento(self, nombre_doc: str, nombre_columna: str, tipo, selector):
         ruta_csv = "..\\txt\\{}.csv".format(nombre_doc)  # definir la ruta predefinida
-        elemento = WebDriverWait(self.driver, timeout=5).until(EC.visibility_of_element_located((tipo, selector))).text
+        elemento = WebDriverWait(self.driver, timeout=10).until(EC.visibility_of_element_located((tipo, selector))).text
         valor = elemento
         print(valor)
         try:
@@ -241,7 +241,7 @@ class funciones_2_0:
                 with open(ruta_csv, 'a', newline='', encoding='utf-8') as csvfile:
                     fieldnames = [nombre_columna]
                     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-                    elemento = WebDriverWait(self.driver, timeout=5).until(
+                    elemento = WebDriverWait(self.driver, timeout=10).until(
                         EC.visibility_of_element_located((tipo, selector))).text
                     valor = elemento
                     valor_repleace = valor.replace('"', '').replace('\n','')
@@ -251,14 +251,14 @@ class funciones_2_0:
 
         # Captura el texto del elemento con el xpath especificado
         try:
-            elemento = WebDriverWait(self.driver, timeout=5).until(
+            elemento = WebDriverWait(self.driver, timeout=10).until(
                 EC.visibility_of_element_located((tipo, selector))).text
         except Exception as e:
             print(f"No se pudo encontrar el elemento con el xpath especificado: {e}")
             return
     # def CrearDocumento(self,nombre_doc: str,nombre_columna: str,tipo, selector):
     #     ruta_csv = "..\\txt\\{}".format(nombre_doc)  # definir la ruta predefinida
-    #     elemento = WebDriverWait(self.driver, timeout=5).until(EC.visibility_of_element_located((tipo, selector))).text
+    #     elemento = WebDriverWait(self.driver, timeout=10).until(EC.visibility_of_element_located((tipo, selector))).text
     #     valor = elemento
     #     print(valor)
     #     try:
@@ -273,7 +273,7 @@ class funciones_2_0:
     #             with open(ruta_csv, 'a', newline='') as csvfile:
     #                 fieldnames = [nombre_columna]
     #                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-    #                 elemento = WebDriverWait(self.driver, timeout=5).until(EC.visibility_of_element_located((tipo, selector))).text
+    #                 elemento = WebDriverWait(self.driver, timeout=10).until(EC.visibility_of_element_located((tipo, selector))).text
     #                 valor = elemento
     #                 valor_repleace = valor.replace('"', '')
     #                 writer.writerow({nombre_columna: valor_repleace})
@@ -282,7 +282,7 @@ class funciones_2_0:
     #
     #     # Captura el texto del elemento con el xpath especificado
     #     try:
-    #         elemento = WebDriverWait(self.driver, timeout=5).until(EC.visibility_of_element_located((tipo, selector))).text
+    #         elemento = WebDriverWait(self.driver, timeout=10).until(EC.visibility_of_element_located((tipo, selector))).text
     #     except Exception as e:
     #         print(f"No se pudo encontrar el elemento con el xpath especificado: {e}")
     #         return

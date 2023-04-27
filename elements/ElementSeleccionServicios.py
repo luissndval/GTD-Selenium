@@ -23,9 +23,10 @@ Horario = "(//li[@class='clsAvailableHour'])[1]"
 COntinuarHorario = "//p[contains(.,'Continuar')]"
 
 ########## CONFIRMAR##############
-
-rut = "(//input[@name='custom_attributes[rut]'])[3]"
-Serie = "(//input[contains(@name,'1]')])[3]"
+rut="(//span[text()='RUT']//..//..//div//input[@name='custom_attributes[rut]'])[2]"
+# rut = "(//input[@name='custom_attributes[rut]'])[3]"
+# Serie = "(//input[contains(@name,'1]')])[3]"
+Serie= "(//input[contains(@name,'1]')])[2]"
 AceptoTyC = "//span[contains(@id,'check4')]"
 ContinuarDatos = "//span[contains(.,'Continuar')]"
 

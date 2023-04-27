@@ -4,6 +4,8 @@ Instalacion allure report https://www.skill2lead.com/allure-report/allure-report
 1- para crear el feature. Comando: behave features
 
 2- behave -f allure_behave.formatter:AllureFormatter -o reports/  (se utiliza para ejecutar la prueba,)
+    2.1 - behave -f allure_behave.formatter:AllureFormatter -o reports/ --tags=@declarado
+
 
 3-  allure serve reports/  (levantar el servidor de pruebas.)
 

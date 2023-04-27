@@ -1,13 +1,15 @@
 from behave import *
-from pages.GTDServicioPage import SeleccionServicio
+
 from Funciones.Funciones import funciones_2_0
+from pages.GTDServicioPage import SeleccionServicio
+
 
 @given(u'Iniciando Navegador en la Web : "{Web}"')
 def step_impl(context, Web):
     try:
         SeleccionServicio.OpenBrowser(context, Web)
     except:
-        funciones_2_0.screenShot(context,"Fallo al iniciar navegador")
+        funciones_2_0.screenShot(context, "Fallo al iniciar navegador")
         context.driver.close()
         assert False, "La prueba fallo en: ----->>> Iniciando Navegador"
 
@@ -47,7 +49,7 @@ def step_impl(context, Nombre):
     try:
         SeleccionServicio.NombreApellido(context, Nombre)
     except:
-        funciones_2_0.screenShot(context,'Se ingresa Nombre y Apellido : "{Nombre}"')
+        funciones_2_0.screenShot(context, 'Se ingresa Nombre y Apellido : "{Nombre}"')
         context.driver.close()
         assert False, "La prueba fallo: ----->>> Se ingresa Nombre y Apellido : '{Nombre}'"
 
@@ -107,7 +109,8 @@ def step_impl(context, Pago, Rut, Serie):
     try:
         SeleccionServicio.ConfirmarContratacion(context, Pago, Rut, Serie)
     except:
-        funciones_2_0.screenShot(context, 'Confirmar contratacion, Elegir metodo de Pago "{Pago}" ingresar Rut "{Rut}" ingresar "{Serie}"')
+        funciones_2_0.screenShot(context,
+                                 'Confirmar contratacion, Elegir metodo de Pago "{Pago}" ingresar Rut "{Rut}" ingresar "{Serie}"')
         context.driver.close()
         assert False, "La prueba fallo en :  ----->>> Confirmar contratacionRut"
 
@@ -117,7 +120,8 @@ def step_impl(context, Tar):
     try:
         SeleccionServicio.PatPass(context, Tar)
     except:
-        funciones_2_0.screenShot(context, 'Se visualiza Ventana Patpass, se completan los campos Numero de Tarjeta: "{Tar}" y Ciudad')
+        funciones_2_0.screenShot(context,
+                                 'Se visualiza Ventana Patpass, se completan los campos Numero de Tarjeta: "{Tar}" y Ciudad')
         context.driver.close()
         assert False, "La prueba fallo en :  ----->>> Confirmar contratacionRut"
 
@@ -127,7 +131,8 @@ def step_impl(context, RutPago, Clave):
     try:
         SeleccionServicio.transbank(context, RutPago, Clave)
     except:
-        funciones_2_0.screenShot(context,'Se visualiza Pantalla Transbank se Completa Rut: "{RutPago}" y  Clave: "{Clave}"')
+        funciones_2_0.screenShot(context,
+                                 'Se visualiza Pantalla Transbank se Completa Rut: "{RutPago}" y  Clave: "{Clave}"')
         context.driver.close()
         assert False, "La prueba fallo en :  ----->>> Confirmar contratacionRut"
 
@@ -137,7 +142,8 @@ def step_impl(context):
     try:
         SeleccionServicio.ValPatPass(context, )
     except:
-        funciones_2_0.screenShot(context,'Se tilda la casilla "Acepto terminos y condiciones" , se realiza click Continuar.')
+        funciones_2_0.screenShot(context,
+                                 'Se tilda la casilla "Acepto terminos y condiciones" , se realiza click Continuar.')
         context.driver.close()
         assert False, "La prueba fallo en :  ----->>> Se tilda la casilla Acepto terminos y condiciones"
 
@@ -149,6 +155,6 @@ def step_impl(context):
         SeleccionServicio.AlmacenamientoId(context)
         context.driver.close()
     except:
-        funciones_2_0.screenShot(context,'Se valida la obtencion del id de la solicitud realizada')
+        funciones_2_0.screenShot(context, 'Se valida la obtencion del id de la solicitud realizada')
         context.driver.close()
         assert False, "La prueba fallo en :  ----->>> Se tilda la casilla Acepto terminos y condiciones"

@@ -78,7 +78,7 @@ class SeleccionServicio(funciones_2_0):
             funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.COntinuarHorario)
             time.sleep(t2)
         except TimeoutException:
-            dias_semana = ["LUN", "MAR", "MIER", "JUE", "VIE"]
+            dias_semana = ["LUN", "MAR", "MIER", "JUE", "VIE", "SAB","DOM"]
             for dia in dias_semana:
                 dias_sin_comillas = dia.replace('"', '')
                 xpath_variable = f"//div[@class='qs-square {dias_sin_comillas} qs-num']"
@@ -140,6 +140,7 @@ class SeleccionServicio(funciones_2_0):
 
     def IdValidate(self, ):
         funciones_2_0.validates(self, By.XPATH, ElementSeleccionServicios.validate)
+        funciones_2_0.screenShot(self,"Captura-de-ID")
 
     def ValidarSolicitud(self, ):
         funciones_2_0.validates(self, By.XPATH, ElementSeleccionServicios.validate)
@@ -147,21 +148,25 @@ class SeleccionServicio(funciones_2_0):
 
     def ContinuarServicioTV(self, ):
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.TambienInteresConfirmar)
+        funciones_2_0.screenShot(self,"Captura-de-TV")
+
 
     def ContinuarCoberturaTV(self, Cobertura):
         funciones_2_0.click_Field(self, By.XPATH, f"//h3[@class='selected-product'][contains(.,'{Cobertura}')]")
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.ConfirmarPlan)
+        funciones_2_0.screenShot(self, "Captura-de-TV")
 
     def AlmacenamientoId(self):
         funciones_2_0.CrearDocumento(self,"ID-GTD-OPERACIONES","ID-GTD",By.XPATH,ElementSeleccionServicios.IDValidateGTD)
+        funciones_2_0.screenShot(self, "Captura-de-TV")
 
-    def SuscripcionBoleta(self, Pago, Rut, Serie):
+    def SuscripcionBoletaGTD(self,Pago,Rut,Serie):
         funciones_2_0.click_Field(self, By.XPATH, f"//p[contains(.,'{Pago}')]")
         time.sleep(t)
-        funciones_2_0.scrollToElement(self, By.XPATH, ElementSeleccionServicios.rut)
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.rut, Rut)
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.Serie, Serie)
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.AceptoTyC)
+        time.sleep(t2)
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.ContinuarDatos)
         funciones_2_0.screenShot(self, "Confirmacion")
         time.sleep(15)

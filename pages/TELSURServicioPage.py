@@ -83,7 +83,7 @@ class telsur(funciones_2_0):
             funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.COntinuarHorario)
             time.sleep(t2)
         except TimeoutException:
-            dias_semana = ["LUN", "MAR", "MIER", "JUE", "VIE"]
+            dias_semana = ["LUN", "MAR", "MIER", "JUE", "VIE","SAB","DOM"]
             for dia in dias_semana:
                 dias_sin_comillas = dia.replace('"', '')
                 xpath_variable = f"//div[@class='qs-square {dias_sin_comillas} qs-num']"
@@ -96,7 +96,7 @@ class telsur(funciones_2_0):
             funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.Horario)
             funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.COntinuarHorario)
 
-    def ConfirmarContratacion(self, Pago, Rut, Serie):
+    def ConfirmarContratacion(self, Pago, Serie):
         funciones_2_0.click_Field(self, By.XPATH, f"//p[contains(.,'{Pago}')]")
         time.sleep(t)
         funciones_2_0.click_Field(self, By.XPATH, "//button[contains(.,'Entendido')]")
@@ -153,3 +153,13 @@ class telsur(funciones_2_0):
     def ContinuarCoberturaTV(self, Cobertura):
         funciones_2_0.click_Field(self, By.XPATH, f"//h3[@class='selected-product'][contains(.,'{Cobertura}')]")
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.ConfirmarPlan)
+
+    def SuscripcionBoletaTelsur(self, Pago, Serie):
+        funciones_2_0.click_Field(self, By.XPATH, f"//p[contains(.,'{Pago}')]")
+        time.sleep(t)
+        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.Serie, Serie)
+        funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.AceptoTyC)
+        time.sleep(t2)
+        funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.ContinuarDatos)
+        funciones_2_0.screenShot(self, "Confirmacion")
+        time.sleep(15)
