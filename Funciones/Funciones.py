@@ -153,76 +153,13 @@ class funciones_2_0:
         print("\n Elemento Cargado -> {} ".format(selector))
 
     def scrollToElement_visibility(self, tipo, elemento):
-        val = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((tipo, elemento)))
+        val = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((tipo, elemento)))
         self.driver.execute_script("arguments[0].scrollIntoView();", val)
         print("\n Desplazando al elemento -> {} ".format(elemento))
 
     def Iframe(self, tipo, selector):
         element = self.driver.find_element(tipo, selector)
         self.driver.switch_to.frame(element)
-
-    import csv
-    import os
-    from lxml import etree
-
-    # with open('./txt/ABMORGANISMO.csv') as csvfile:
-    #     Reader= csv.DictReader(csvfile)
-    #     for row in Reader:
-    #              print(row['Organismo'], row['Status'])
-    #
-
-    # def CrearDocumento(self, NombreDoc, tipo ,selector,NameColum):
-    #
-    #     dir_path = r"../txt"
-    #     file_name = NombreDoc
-    #     file_path = os.path.join(dir_path, file_name)
-    #     texto = WebDriverWait(self.driver, timeout=10).until(
-    #         EC.visibility_of_element_located((tipo, selector))).text
-    #     try:
-    #         Validate = os.path.exists(NombreDoc)
-    #         if Validate == False:
-    #             with open(file_path, 'w', newline='') as csvfile:
-    #                 fieldnames = [NameColum]
-    #                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames, )
-    #                 writer.writeheader()
-    #                 writer.writerow({NameColum: texto})
-    #
-    #         else:
-    #
-    #             with open(file_path, 'a', newline="") as csv_file:
-    #                 fieldnames = [NameColum]
-    #                 Dates = ([{NameColum: texto}])
-    #                 writer = csv.DictWriter(csv_file, fieldnames=fieldnames, )
-    #                 for row in Dates:
-    #                     writer.writerow(row)
-    #     except:
-    #         assert True
-    # def CrearDocumento(self, NombreDoc,tipo, selector):
-    #
-    #     dir_path = r"../txt"
-    #     file_name = NombreDoc
-    #     file_path = os.path.join(dir_path, file_name)
-    #     Capturado = WebDriverWait(self.driver, timeout=10).until(EC.visibility_of_element_located((tipo, selector))).text
-    #     print(Capturado)
-    #     try:
-    #         Validate = os.path.exists(dir_path)
-    #         if Validate == False:
-    #             with open(file_path, 'w', newline='') as csvfile:
-    #                 fieldnames = ["ID-Operacion"]
-    #                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames, )
-    #                 writer.writeheader()
-    #                 writer.writerow({'Nombre': Capturado})
-    #
-    #         else:
-    #
-    #             with open(file_path, 'a', newline="") as csv_file:
-    #                 fieldnames = ["ID-Operacion"]
-    #                 Dates = ([{'ID-Operacion': Capturado}])
-    #                 writer = csv.DictWriter(csv_file, fieldnames=fieldnames, )
-    #                 for row in Dates:
-    #                     writer.writerow(row)
-    #     except:
-    #         assert True
 
     def CrearDocumento(self, nombre_doc: str, nombre_columna: str, tipo, selector):
         ruta_csv = "..\\txt\\{}.csv".format(nombre_doc)  # definir la ruta predefinida

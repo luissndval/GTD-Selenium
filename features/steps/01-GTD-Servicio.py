@@ -142,8 +142,7 @@ def step_impl(context):
     try:
         SeleccionServicio.ValPatPass(context, )
     except:
-        funciones_2_0.screenShot(context,
-                                 'Se tilda la casilla "Acepto terminos y condiciones" , se realiza click Continuar.')
+        funciones_2_0.screenShot(context,'Se tilda la casilla "Acepto terminos y condiciones" , se realiza click Continuar.')
         context.driver.close()
         assert False, "La prueba fallo en :  ----->>> Se tilda la casilla Acepto terminos y condiciones"
 

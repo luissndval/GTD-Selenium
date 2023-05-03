@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
     # testdir = f"C:\\proyectos\\Turnera\\turnera-backend-administracion\\TestAutomation\\features\\{t03}"  # PUEDES INDICAR EL SCRIPT A EJECUTAR
 
-    testdir = f"..\\features\\{t03}"  # PUEDES INDICAR EL SCRIPT A EJECUTAR
+    testdir = f"..\\features\\{t01}"  # PUEDES INDICAR EL SCRIPT A EJECUTAR
 
     # complete command
 

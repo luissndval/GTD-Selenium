@@ -162,7 +162,7 @@ class SeleccionServicio(funciones_2_0):
 
     def SuscripcionBoletaGTD(self,Pago,Rut,Serie):
         funciones_2_0.click_Field(self, By.XPATH, f"//p[contains(.,'{Pago}')]")
-        time.sleep(t)
+        time.sleep(t2)
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.rut, Rut)
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.Serie, Serie)
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.AceptoTyC)

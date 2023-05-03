@@ -162,4 +162,7 @@ class telsur(funciones_2_0):
         time.sleep(t2)
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.ContinuarDatos)
         funciones_2_0.screenShot(self, "Confirmacion")
-        time.sleep(15)
+        time.sleep(20)
+    def AlmacenamientoIdTelsur(self):
+        funciones_2_0.CrearDocumento(self,"ID-TELSUR-OPERACIONES","ID-TELSUR",By.XPATH,ElementSeleccionServicios.IDValidateGTD)
+        funciones_2_0.screenShot(self, "Captura-de-TV")
