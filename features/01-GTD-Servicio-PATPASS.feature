@@ -4,7 +4,7 @@ Feature: Solicitud Servicio
     Given  Iniciando Navegador en la Web : "<Web>"
     When Se selecciona region: "<Region>"
     When Se selecciona Comuna: "<Comuna>
-    When Se selecciona Calle y Numero: "<Calle>" , "<Numero>"
+    When Se selecciona Calle y Numero: "<Calle>" , "<Numero>", Depto "<Depto>"
     When Se ingresa Nombre y Apellido : "<Nombre>"
     When se ingresa Numero de contacto: "<Contacto>"
     When se ingresa Correo electronico : "<Email>"

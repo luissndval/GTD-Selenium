@@ -7,7 +7,8 @@ from pages.GTDServicioPage import SeleccionServicio
 @when(u'Confirmar contratacion, se elige metodo de Pago "{Pago}" se ingresar Rut "{Rut}" se ingresar "{Serie}"')
 def step_impl(context, Pago, Rut, Serie):
     try:
-        SeleccionServicio.SuscripcionBoletaGTD(context, Pago, Rut,Serie)
+        context.driver.refresh()
+        SeleccionServicio.SuscripcionBoletaGTD(context, Pago, Rut, Serie)
     except:
         funciones_2_0.screenShot(context,
                                  'Confirmar contratacion, Elegir metodo de Pago "{Pago}" ingresar Rut "{Rut}" ingresar "{Serie}"')

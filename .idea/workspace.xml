@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1935dfbd-a7f1-47f6-9afb-1f0d5091bb90" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GTD-Selenium.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Funciones/Funciones.py" beforeDir="false" afterPath="$PROJECT_DIR$/Funciones/Funciones.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elements/ElementSeleccionServicios.py" beforeDir="false" afterPath="$PROJECT_DIR$/elements/ElementSeleccionServicios.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/01-GTD-Servicio-PATPASS.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/01-GTD-Servicio-PATPASS.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/03-GTD-Servicio-SuscipcionBoleta.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/03-GTD-Servicio-SuscipcionBoleta.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/04-GTD-Servicio-tv-SuscripcionBoleta.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/04-GTD-Servicio-tv-SuscripcionBoleta.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/05-TELSUR-Servicio-PATPASS.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/05-TELSUR-Servicio-PATPASS.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/06-TELSUR-Servicio-SuscripcionBoleta.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/06-TELSUR-Servicio-SuscripcionBoleta.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/01-GTD-Servicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/01-GTD-Servicio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/02-GTD-ServicioTV.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/02-GTD-ServicioTV.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/03-GTD-Servicio-SuscipcionBoleta.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/03-GTD-Servicio-SuscipcionBoleta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/05-TELSUR-Servicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/05-TELSUR-Servicio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/06-TELSUR-Servicio-SuscripcionBoleta.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/06-TELSUR-Servicio-SuscripcionBoleta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/GTDServicioPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/GTDServicioPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/TELSURServicioPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/TELSURServicioPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/data/behaviors.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/data/behaviors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/data/categories.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/data/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/data/packages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/data/suites.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/data/suites.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/data/timeline.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/export/influxDbData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/export/mail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/export/prometheusData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/history/categories-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/history/duration-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/history/history-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/history/history.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/history/retry-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/plugins/behaviors/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/plugins/packages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/plugins/screen-diff/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/plugins/screen-diff/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/behaviors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/categories-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/duration-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/duration.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/environment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/executors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/history-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/retry-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/severity.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/status-chart.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/suites.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/summary.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/txt/CreatWriteRead.py" beforeDir="false" afterPath="$PROJECT_DIR$/txt/CreatWriteRead.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/txt/ID-GTD-OPERACIONES.csv" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2P0jkNLjHpZm1qbKEhDvv6PIG7z" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Luis Sandoval/Documents/Automation/Selenium-Python-Behave&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Luis Sandoval\Documents\Automation\GTD-Selenium\features" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.behave">
+    <configuration name="behave" type="PythonConfigurationType" factoryName="Python">
+      <module name="GTD-Selenium" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramFiles\Python311\python.exe" />
+      <option name="SDK_NAME" value="Python 3.11 (Selenium-Python-Behave) (2)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="behave" />
+      <option name="PARAMETERS" value="$FilePath$" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="runner" type="PythonConfigurationType" factoryName="Python">
+      <module name="GTD-Selenium" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramFiles\Python311\python.exe" />
+      <option name="SDK_NAME" value="Python 3.11" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/features" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/features/runner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.runner" />
+      <item itemvalue="Python.behave" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1935dfbd-a7f1-47f6-9afb-1f0d5091bb90" name="Changes" comment="" />
+      <created>1682601038677</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682601038677</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+</project>

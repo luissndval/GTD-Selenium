@@ -21,5 +21,5 @@ Feature: Telsur contratacion de servicio
 
 
     Examples:
-      | Web                     | Region   | comuna   | Calle              | Numero | Nombre          | Contacto  | Email         | Cobertura         | Interes               | Pago                  | Rut          | Serie      | TestCase | Tar                 | Clave | RutPago      |
+      | Web                     | Region   | comuna   | Calle              | Numero | Nombre          | Contacto  | Email         | Cobertura         | Interes               | Pago                  | Rut       | Serie      | TestCase | Tar                 | Clave | RutPago      |
       | /plan-internet-600.html | LOS RIOS | VALDIVIA | ALBERTO BLEST GANA | 255    | ELLIOT LEOPOLDO | 957544722 | test@test.com | Plan Internet 600 | Microsoft 365 Familia | Pago Automático (PAT) | 107033572 | A018961170 | TB1      | 4051-8856-0044-6623 | 123   | 11.111.111-1 |

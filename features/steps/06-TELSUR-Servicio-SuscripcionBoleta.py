@@ -14,6 +14,8 @@ def step_impl(context, Serie, Pago):
                                  'Se visualiza Pantalla Transbank se Completa Rut: "{RutPago}" y  Clave: "{Clave}"')
         context.driver.close()
         assert False, "La prueba fallo en :  ----->>> Confirmar contratacionRut"
+
+
 @then(u'Se valida la solicitud realizada.')
 def step_impl(context):
     try:

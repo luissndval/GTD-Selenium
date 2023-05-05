@@ -35,6 +35,7 @@ def step_impl(context, Comuna):
 
 
 @when(u'Se selecciona Calle y Numero: "{Calle}" , "{Numero}"')
+# @when(u'Se selecciona Calle y Numero: "{Calle}" , "{Numero}", Depto "{Depto}"')
 def step_impl(context, Calle, Numero):
     try:
         SeleccionServicio.CalleyAltura(context, Calle, Numero)
@@ -140,9 +141,11 @@ def step_impl(context, RutPago, Clave):
 @when(u'Se tilda la casilla "Acepto terminos y condiciones" , se realiza click Continuar.')
 def step_impl(context):
     try:
+        context.driver.refresh()
         SeleccionServicio.ValPatPass(context, )
     except:
-        funciones_2_0.screenShot(context,'Se tilda la casilla "Acepto terminos y condiciones" , se realiza click Continuar.')
+        funciones_2_0.screenShot(context,
+                                 'Se tilda la casilla "Acepto terminos y condiciones" , se realiza click Continuar.')
         context.driver.close()
         assert False, "La prueba fallo en :  ----->>> Se tilda la casilla Acepto terminos y condiciones"
 

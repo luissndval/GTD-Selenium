@@ -118,6 +118,7 @@ def step_impl(context):
 def step_impl(context, Pago, Serie):
     try:
         telsur.ConfirmarContratacion(context, Pago, Serie)
+        context.driver.refresh()
     except:
         funciones_2_0.screenShot(context, "No-Contraseña")
         context.driver.close()

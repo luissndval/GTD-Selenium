@@ -1,5 +1,6 @@
 import csv
 import os
+
 from lxml import etree
 
 
@@ -12,8 +13,7 @@ class CreateWriterRead():
     def __init__(self, driver):
         self.driver = driver
 
-
-    def CrearDocumento(self, NombreDoc, NombreColumna, tipo,Xpath):
+    def CrearDocumento(self, NombreDoc, NombreColumna, tipo, Xpath):
         dir_path = r"../txt/"
         file_name = f"{NombreDoc}.csv"
         file_path = os.path.join(dir_path, file_name)
@@ -40,7 +40,6 @@ class CreateWriterRead():
                     writer.writerow([texto])
 
         # Capturamos el texto del elemento con el xpath especificado
-
 
         # Escribimos el texto capturado en la columna especificada
         with open(file_path, 'a', newline="") as csv_file:

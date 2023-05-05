@@ -1,10 +1,10 @@
+import csv
 import os
 import time
 import warnings
-import csv
+
 import allure
 from allure_commons.types import AttachmentType
-from lxml import etree
 from pyvirtualdisplay import Display
 from selenium import webdriver
 from selenium.webdriver import ActionChains
@@ -42,6 +42,12 @@ class funciones_2_0:
         display = Display(visible=0, size=(800, 600))
         display.start()
 
+    def driver_mobile(self):
+        mobile_emulation = {"deviceName": "iPhone X"}
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
+        self.driver = webdriver.Chrome(chrome_options=chrome_options)
+
     ############################################################################################
     ################################## element_to_be_clickable##################################
     ############################################################################################
@@ -52,7 +58,8 @@ class funciones_2_0:
         print("Página abierta: " + str(link))
 
     def input_Texto(self, tipo, selector, texto):
-        WebDriverWait(self.driver, timeout=10).until(EC.visibility_of_element_located((tipo, selector))).send_keys(texto)
+        WebDriverWait(self.driver, timeout=10).until(EC.visibility_of_element_located((tipo, selector))).send_keys(
+            texto)
         time.sleep(1)
         print("\n Escribir en el campo {} el texto -> {} ".format(selector, texto))
 
@@ -161,75 +168,30 @@ class funciones_2_0:
         element = self.driver.find_element(tipo, selector)
         self.driver.switch_to.frame(element)
 
-    def CrearDocumento(self, nombre_doc: str, nombre_columna: str, tipo, selector):
+    def CrearDocumento(self, nombre_doc, nombre_columna, tipo, selector):
         ruta_csv = "..\\txt\\{}.csv".format(nombre_doc)  # definir la ruta predefinida
-        elemento = WebDriverWait(self.driver, timeout=10).until(EC.visibility_of_element_located((tipo, selector))).text
-        valor = elemento
-        print(valor)
+        elemento = WebDriverWait(self.driver, timeout=5).until(EC.visibility_of_element_located((tipo, selector))).text
+        valor_replace = elemento.replace('"', '').replace('\n', ' ')
+        print(valor_replace)
         try:
             if not os.path.exists(ruta_csv):
-                with open(ruta_csv, 'w', newline='', encoding='utf-8') as csvfile:
+                with open(ruta_csv, 'w', newline='') as csvfile:
                     fieldnames = [nombre_columna]
                     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                     writer.writeheader()
-                    valor_repleace = valor.replace('"', '').replace('\n','')
-                    writer.writerow({nombre_columna: valor_repleace})
+                    writer.writerow({nombre_columna: valor_replace})
             else:
-                with open(ruta_csv, 'a', newline='', encoding='utf-8') as csvfile:
+                with open(ruta_csv, 'a', newline='') as csvfile:
                     fieldnames = [nombre_columna]
                     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-                    elemento = WebDriverWait(self.driver, timeout=10).until(
-                        EC.visibility_of_element_located((tipo, selector))).text
-                    valor = elemento
-                    valor_repleace = valor.replace('"', '').replace('\n','')
-                    writer.writerow({nombre_columna: valor_repleace})
+                    writer.writerow({nombre_columna: valor_replace})
         except Exception as e:
             print(f"Error al crear o escribir en el documento: {e}")
 
         # Captura el texto del elemento con el xpath especificado
         try:
-            elemento = WebDriverWait(self.driver, timeout=10).until(
+            elemento = WebDriverWait(self.driver, timeout=5).until(
                 EC.visibility_of_element_located((tipo, selector))).text
         except Exception as e:
             print(f"No se pudo encontrar el elemento con el xpath especificado: {e}")
-            return
-    # def CrearDocumento(self,nombre_doc: str,nombre_columna: str,tipo, selector):
-    #     ruta_csv = "..\\txt\\{}".format(nombre_doc)  # definir la ruta predefinida
-    #     elemento = WebDriverWait(self.driver, timeout=10).until(EC.visibility_of_element_located((tipo, selector))).text
-    #     valor = elemento
-    #     print(valor)
-    #     try:
-    #         if not os.path.exists(ruta_csv):
-    #             with open(ruta_csv, 'w', newline='') as csvfile:
-    #                 fieldnames = [nombre_columna]
-    #                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-    #                 writer.writeheader()
-    #                 valor_repleace = valor.replace('"', '')
-    #                 writer.writerow({nombre_columna: valor_repleace})
-    #         else:
-    #             with open(ruta_csv, 'a', newline='') as csvfile:
-    #                 fieldnames = [nombre_columna]
-    #                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-    #                 elemento = WebDriverWait(self.driver, timeout=10).until(EC.visibility_of_element_located((tipo, selector))).text
-    #                 valor = elemento
-    #                 valor_repleace = valor.replace('"', '')
-    #                 writer.writerow({nombre_columna: valor_repleace})
-    #     except Exception as e:
-    #         print(f"Error al crear o escribir en el documento: {e}")
-    #
-    #     # Captura el texto del elemento con el xpath especificado
-    #     try:
-    #         elemento = WebDriverWait(self.driver, timeout=10).until(EC.visibility_of_element_located((tipo, selector))).text
-    #     except Exception as e:
-    #         print(f"No se pudo encontrar el elemento con el xpath especificado: {e}")
-    #         return
-
-        # # Escribe el texto capturado en la columna correspondiente del archivo CSV
-        # try:
-        #     with open(ruta_csv, 'a', newline='') as csvfile:
-        #         fieldnames = [nombre_columna]
-        #         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        #         writer.writerow({nombre_columna: valor})
-        # except Exception as e:
-        #     print(f"Error al escribir en el documento: {e}")
-
+            return e

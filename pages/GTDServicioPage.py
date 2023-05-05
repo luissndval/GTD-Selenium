@@ -3,8 +3,9 @@ import time
 from selenium.common import NoSuchElementException, TimeoutException
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
+
 from Funciones.Funciones import funciones_2_0
 from elements import ElementSeleccionServicios
 
@@ -21,6 +22,7 @@ class SeleccionServicio(funciones_2_0):
     def OpenBrowser(self, Web):
         funciones_2_0.driver_Chrome(self)
         # funciones_2_0.driver_Firefox(self)
+        # funciones_2_0.driver_mobile(self)
         funciones_2_0.browser(self, f"https://mcstaging.tienda.gtd.cl{Web}")
         funciones_2_0.screenShot(self, "Navegador-Iniciado")
         time.sleep(t2)
@@ -30,14 +32,15 @@ class SeleccionServicio(funciones_2_0):
         funciones_2_0.input_Texto(self, By.XPATH, "//input[contains(@id,'region')]", Region)
         funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='METROPOLITANA']")
 
-
     def SeleccionComuna(self, Comuna):
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.Comuna, Comuna, )
+        time.sleep(t)
         funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{Comuna}']")
 
     def CalleyAltura(self, Calle, Numero):
         time.sleep(t2)
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.Calle, Calle)
+        time.sleep(t2)
         funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{Calle}']")
         time.sleep(t)
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.NumeroCalle, Numero)
@@ -48,6 +51,7 @@ class SeleccionServicio(funciones_2_0):
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.NombreApellido, Nombre)
 
     def Contacto(self, Contacto):
+        time.sleep(5)
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.Telefono, Contacto)
 
     def CorreoElectronico(self, Email):
@@ -56,6 +60,7 @@ class SeleccionServicio(funciones_2_0):
         time.sleep(15)
 
     def SeleccionarCobertura(self, Cobertura):
+        time.sleep(5)
         funciones_2_0.click_Field(self, By.XPATH, f"//h3[text()='{Cobertura}']")
         time.sleep(t2)
         funciones_2_0.screenShot(self, "Cobertura")
@@ -78,7 +83,7 @@ class SeleccionServicio(funciones_2_0):
             funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.COntinuarHorario)
             time.sleep(t2)
         except TimeoutException:
-            dias_semana = ["LUN", "MAR", "MIER", "JUE", "VIE", "SAB","DOM"]
+            dias_semana = ["LUN", "MAR", "MIER", "JUE", "VIE", "SAB", "DOM"]
             for dia in dias_semana:
                 dias_sin_comillas = dia.replace('"', '')
                 xpath_variable = f"//div[@class='qs-square {dias_sin_comillas} qs-num']"
@@ -90,7 +95,6 @@ class SeleccionServicio(funciones_2_0):
                     continue
             funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.Horario)
             funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.COntinuarHorario)
-
 
     def ConfirmarContratacion(self, Pago, Rut, Serie):
         funciones_2_0.click_Field(self, By.XPATH, f"//p[contains(.,'{Pago}')]")
@@ -122,8 +126,8 @@ class SeleccionServicio(funciones_2_0):
         funciones_2_0.screenShot(self, "Pantalla-Transbank")
         funciones_2_0.Iframe(self, By.XPATH, "//iframe[contains(@name,'iframeId')]")
         time.sleep(10)
-        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.TransbankRutClientInput,RutPago)
-        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.TransbankPassClientInput,Clave)
+        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.TransbankRutClientInput, RutPago)
+        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.TransbankPassClientInput, Clave)
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.TransbankSubmitButton)
         time.sleep(t2)
         funciones_2_0.screenShot(self, "Confirmar-Pago")
@@ -140,7 +144,7 @@ class SeleccionServicio(funciones_2_0):
 
     def IdValidate(self, ):
         funciones_2_0.validates(self, By.XPATH, ElementSeleccionServicios.validate)
-        funciones_2_0.screenShot(self,"Captura-de-ID")
+        funciones_2_0.screenShot(self, "Captura-de-ID")
 
     def ValidarSolicitud(self, ):
         funciones_2_0.validates(self, By.XPATH, ElementSeleccionServicios.validate)
@@ -148,8 +152,7 @@ class SeleccionServicio(funciones_2_0):
 
     def ContinuarServicioTV(self, ):
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.TambienInteresConfirmar)
-        funciones_2_0.screenShot(self,"Captura-de-TV")
-
+        funciones_2_0.screenShot(self, "Captura-de-TV")
 
     def ContinuarCoberturaTV(self, Cobertura):
         funciones_2_0.click_Field(self, By.XPATH, f"//h3[@class='selected-product'][contains(.,'{Cobertura}')]")
@@ -157,10 +160,11 @@ class SeleccionServicio(funciones_2_0):
         funciones_2_0.screenShot(self, "Captura-de-TV")
 
     def AlmacenamientoId(self):
-        funciones_2_0.CrearDocumento(self,"ID-GTD-OPERACIONES","ID-GTD",By.XPATH,ElementSeleccionServicios.IDValidateGTD)
+        funciones_2_0.CrearDocumento(self, "ID-GTD-OPERACIONES", "ID-GTD", By.XPATH,
+                                     ElementSeleccionServicios.IDValidateGTD)
         funciones_2_0.screenShot(self, "Captura-de-TV")
 
-    def SuscripcionBoletaGTD(self,Pago,Rut,Serie):
+    def SuscripcionBoletaGTD(self, Pago, Rut, Serie):
         funciones_2_0.click_Field(self, By.XPATH, f"//p[contains(.,'{Pago}')]")
         time.sleep(t2)
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.rut, Rut)
