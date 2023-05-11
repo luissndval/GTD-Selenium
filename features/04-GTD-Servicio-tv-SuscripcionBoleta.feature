@@ -17,4 +17,4 @@ Feature: Inicio de Sesion con Datos Validos
 
     Examples:
       | Web                              | Region        | Comuna     | Calle           | Numero | Nombre          | Contacto  | Email         | Ciudad | Cobertura                  | Pago         | Rut          | Serie | TestCase | Tar                 | Clave | RutPago      |
-      | /television-entretenido-max.html | METROPOLITANA | LAS CONDES | CERRO PROVINCIA | 125    | ELLIOT LEOPOLDO | 957544722 | test@test.com |        | Television Entretenido max | Pago Mensual | 36.628.878-3 | XXXX  | GTD-16   | 4051-8856-0044-6623 | 123   | 11.111.111-1 |
+      | /television-entretenido-max.html | METROPOLITANA | LAS CONDES | CERRO PROVINCIA | 125    | Testing Balloon | 957544722 | luis.sandoval@balloon-group.com |        | Television Entretenido max | Pago Mensual | 36.628.878-3 | XXXX  | GTD-16   | 4051-8856-0044-6623 | 123   | 11.111.111-1 |

@@ -9,9 +9,9 @@ from selenium.webdriver.support.wait import WebDriverWait
 from Funciones.Funciones import funciones_2_0
 from elements import ElementSeleccionServicios
 
-t = 1
-t2 = 5
-t3 = 10
+t = 3
+t2 = 7
+t3 = 12
 
 
 class SeleccionServicio(funciones_2_0):
@@ -46,6 +46,20 @@ class SeleccionServicio(funciones_2_0):
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.NumeroCalle, Numero)
         funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{Numero}']")
         funciones_2_0.screenShot(self, "Direccion")
+
+    def CalleyAlturaDepto(self, Calle, Numero,Depto):
+        time.sleep(t2)
+        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.Calle, Calle)
+        time.sleep(t2)
+        funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{Calle}']")
+        time.sleep(t)
+        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.NumeroCalle, Numero)
+        funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{Numero}']")
+        funciones_2_0.screenShot(self, "Direccion")
+        time.sleep(t2)
+        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.Depto, Depto)
+        funciones_2_0.click_Field(self, By.XPATH, f"//div[@class='option element'][contains(.,'{Depto}')]")
+
 
     def NombreApellido(self, Nombre):
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.NombreApellido, Nombre)
@@ -160,8 +174,7 @@ class SeleccionServicio(funciones_2_0):
         funciones_2_0.screenShot(self, "Captura-de-TV")
 
     def AlmacenamientoId(self):
-        funciones_2_0.CrearDocumento(self, "ID-GTD-OPERACIONES", "ID-GTD", By.XPATH,
-                                     ElementSeleccionServicios.IDValidateGTD)
+        funciones_2_0.CrearDocumento(self, "ID-GTD-OPERACIONES", "ID-GTD", By.XPATH,ElementSeleccionServicios.IDValidateGTD)
         funciones_2_0.screenShot(self, "Captura-de-TV")
 
     def SuscripcionBoletaGTD(self, Pago, Rut, Serie):

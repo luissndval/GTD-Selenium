@@ -4,6 +4,8 @@ from Funciones.Funciones import funciones_2_0
 from pages.TELSURServicioPage import telsur
 
 
+
+
 @given(u'Se inica navegador y nos dirigimos a la url: "https://mcstaging.tienda.telsur.cl""{Web}"')
 def step_impl(context, Web):
     try:
@@ -34,14 +36,61 @@ def step_impl(context, comuna):
         assert True, "La prueba Fallo en: ----->>> Seleccione Region"
 
 
-@when(u'Se selecciona Calle y Numero: "{Calle}" , "{Numero}".')
-def step_impl(context, Calle, Numero):
+# @when('Se selecciona Calle , Numero , Depto: "{Calle}" , "{Numero}"')
+@when('Se selecciona Calle , Numero , Depto: "{Calle}" , "{Numero}" [{Depto}]')
+def seleccionar_calle_numero_depto(context, Calle, Numero, Depto):
     try:
-        telsur.CalleyAltura(context, Calle, Numero)
+        Depto = Depto.strip('[]"')
+        if Depto and len(Depto.strip()) > 0 and not Depto.strip() == ",":
+
+            telsur.CalleyAlturaDepto(context, Calle, Numero, Depto)
+            funciones_2_0.screenShot(context, f"Se selecciona Calle y Numero: '{Calle}' '{Numero}'{Depto}")
+        else:
+            telsur.CalleyAlturaSinDepto(context, Calle, Numero)
+            funciones_2_0.screenShot(context, f"Se selecciona Calle y Numero: '{Calle}' '{Numero}'")
     except:
-        funciones_2_0.screenShot(context, "Se selecciona Calle y Numero: '{Calle}' '{Numero}'")
+        funciones_2_0.screenShot(context, f"Se selecciona Calle y Numero: '{Calle}' '{Numero}'")
         context.driver.close()
         assert False, "La prueba fallo: ----->>> en Seleccionar calle y numero"
+
+
+# @when('Se selecciona Calle , Numero , Depto: "{Calle}" , "{Numero}" {Depto}')
+# def seleccionar_calle_numero_depto(context, Calle, Numero, Depto):
+#
+#     try:
+#         if Depto and not (Depto.strip() == "" or Depto.strip() == ","):
+#             step = f'Se selecciona Calle , Numero: "{Calle}" , "{Numero}"'
+#
+#         else:
+#             Depto = Depto.strip('[]"')
+#             step = f'Se selecciona Calle , Numero , Depto: "{Calle}" , "{Numero}" , "{Depto}"'
+#         context.execute_steps(step)
+#     except:
+#         funciones_2_0.screenShot(context, f"Se selecciona Calle y Numero: '{Calle}' '{Numero}'")
+#         context.driver.close()
+#         assert False, "La prueba fallo: ----->>> en Seleccionar calle y numero"
+#
+#     def funcion_adicional1():
+#         telsur.CalleyAlturaSinDepto(context, Calle, Numero)
+#         funciones_2_0.screenShot(context, f"Se selecciona Calle y Numero: '{Calle}' '{Numero}'")
+#         pass
+#
+#     def funcion_adicional2():
+#         telsur.CalleyAlturaDepto(context, Calle, Numero, Depto)
+#         funciones_2_0.screenShot(context, f"Se selecciona Calle y Numero: '{Calle}' '{Numero}'{Depto}")
+#         # código de la función adicional 2
+#         pass
+
+# def step_impl(context, Calle, Numero, Depto=None):
+#     try:
+#         if Depto is not None:
+#             Depto = Depto.strip('[]"')
+#             telsur.CalleyAltura(context, Calle, Numero, Depto)
+#
+#     except:
+#         funciones_2_0.screenShot(context, "Se selecciona Calle y Numero: '{Calle}' '{Numero}'")
+#         context.driver.close()
+#         assert False, "La prueba fallo: ----->>> en Seleccionar calle y numero"
 
 
 @when(u'Se ingresa Nombre y Apellido : "{Nombre}".')
@@ -162,6 +211,7 @@ def step_impl(context, RutPago, Clave):
 def step_impl(context):
     try:
         telsur.ValidarSolicitud(context, )
+        telsur.AlmacenamientoIdTelsur(context)
         context.driver.close()
     except:
         funciones_2_0.screenShot(context, 'Se valida la obtencion del id de la solicitud realizada')

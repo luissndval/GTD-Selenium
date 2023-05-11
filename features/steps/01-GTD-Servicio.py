@@ -43,7 +43,21 @@ def step_impl(context, Calle, Numero):
         funciones_2_0.screenShot(context, "Se selecciona Calle y Numero: '{Calle}' '{Numero}'")
         context.driver.close()
         assert False, "La prueba fallo: ----->>> en Seleccionar calle y numero"
+@when('Se selecciona Calle y Numero: "{Calle}" , "{Numero}", Depto [{Depto}]')
+def seleccionar_calle_numero_depto(context, Calle, Numero, Depto):
+    try:
+        Depto = Depto.strip('[]"')
+        if Depto and len(Depto.strip()) > 0 and not Depto.strip() == ",":
 
+            SeleccionServicio.CalleyAlturaDepto(context, Calle, Numero, Depto)
+            funciones_2_0.screenShot(context, f"Se selecciona Calle y Numero: '{Calle}' '{Numero}'{Depto}")
+        else:
+            SeleccionServicio.CalleyAltura(context, Calle, Numero)
+            funciones_2_0.screenShot(context, f"Se selecciona Calle y Numero: '{Calle}' '{Numero}'")
+    except:
+        funciones_2_0.screenShot(context, f"Se selecciona Calle y Numero: '{Calle}' '{Numero}'")
+        context.driver.close()
+        assert False, "La prueba fallo: ----->>> en Seleccionar calle y numero"
 
 @when(u'Se ingresa Nombre y Apellido : "{Nombre}"')
 def step_impl(context, Nombre):
@@ -153,7 +167,7 @@ def step_impl(context):
 @then(u'Se valida la obtencion del id de la solicitud realizada')
 def step_impl(context):
     try:
-        SeleccionServicio.ValidarSolicitud(context, )
+        SeleccionServicio.ValidarSolicitud(context)
         SeleccionServicio.AlmacenamientoId(context)
         context.driver.close()
     except:
