@@ -9,9 +9,9 @@ from selenium.webdriver.support.wait import WebDriverWait
 from Funciones.Funciones import funciones_2_0
 from elements import ElementSeleccionServicios
 
-t = 3
-t2 = 7
-t3 = 12
+t = 5
+t2 = 10
+t3 = 15
 
 
 class SeleccionServicio(funciones_2_0):

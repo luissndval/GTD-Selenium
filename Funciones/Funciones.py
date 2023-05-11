@@ -197,7 +197,18 @@ class funciones_2_0:
     #         return e
 
     def CrearDocumento(self, nombre_doc, nombre_columna, tipo, selector):
-        ruta_csv = "C:\\proyectos\\GTD-Selenium\\txt\\{}.csv".format(nombre_doc)  # definir la ruta predefinida
+        # Obtener la ruta absoluta del archivo actual
+        ruta_actual = os.path.abspath(__file__)
+
+        # Obtener la ruta del directorio padre de la carpeta que contiene el archivo actual
+        ruta_padre = os.path.dirname(os.path.dirname(ruta_actual))
+
+        # Combinar la ruta del directorio padre con la ruta relativa a la carpeta que contiene los archivos CSV
+        ruta_txt = os.path.join(ruta_padre, 'txt')
+
+        # Combinar la ruta de la carpeta txt con el nombre del archivo CSV
+        ruta_csv = os.path.join(ruta_txt, '{}.csv'.format(nombre_doc))
+        # ruta_csv = "C:\\Users\\Luis Sandoval\\Documents\\Automation\\GTD-Selenium\\txt\\{}.csv".format(nombre_doc) # definir la ruta predefinida
         elemento = WebDriverWait(self.driver, timeout=5).until(EC.visibility_of_element_located((tipo, selector))).text
         valor = elemento
         print(valor)

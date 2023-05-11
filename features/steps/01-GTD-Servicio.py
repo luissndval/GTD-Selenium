@@ -163,7 +163,6 @@ def step_impl(context):
         context.driver.close()
         assert False, "La prueba fallo en :  ----->>> Se tilda la casilla Acepto terminos y condiciones"
 
-
 @then(u'Se valida la obtencion del id de la solicitud realizada')
 def step_impl(context):
     try:
