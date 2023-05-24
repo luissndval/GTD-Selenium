@@ -24,9 +24,11 @@ Horario = "(//li[@class='clsAvailableHour'])[1]"
 COntinuarHorario = "//p[contains(.,'Continuar')]"
 
 ########## CONFIRMAR##############
+RutPatPass="(//input[@name='custom_attributes[rut]'][@placeholder='Ej: 12345678-9'])[3]"
+SeriePatPass="(//input[contains(@name,'1]')])[3]"
 rut = "(//span[text()='RUT']//..//..//div//input[@name='custom_attributes[rut]'])[2]"
-# rut = "(//input[@name='custom_attributes[rut]'])[3]"
-# Serie = "(//input[contains(@name,'1]')])[3]"
+rutBoleta = "(//input[@name='custom_attributes[rut]'])[3]"
+SerieBoleta= "(//input[contains(@name,'1]')])[3]"
 Serie = "(//input[contains(@name,'1]')])[2]"
 AceptoTyC = "//span[contains(@id,'check4')]"
 ContinuarDatos = "//span[contains(.,'Continuar')]"

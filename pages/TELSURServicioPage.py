@@ -9,9 +9,9 @@ from selenium.webdriver.support.wait import WebDriverWait
 from Funciones.Funciones import funciones_2_0
 from elements import ElementSeleccionServicios
 
-t = 3
-t2 = 10
-t3 = 15
+t = 5
+t2 = 8
+t3 = 12
 
 
 class telsur(funciones_2_0):
@@ -24,6 +24,7 @@ class telsur(funciones_2_0):
         # funciones_2_0.driver_Firefox(self)
         # funciones_2_0.driver_mobile(self)
         funciones_2_0.browser(self, f"https://mcstaging.tienda.telsur.cl{Web}")
+        # funciones_2_0.browser(self, f"https://contratacion.telsur.cl{Web}")      #PRD <<<----||----<<<<<
         funciones_2_0.screenShot(self, "Navegador-Iniciado")
         time.sleep(t2)
 
@@ -62,7 +63,6 @@ class telsur(funciones_2_0):
         funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{Numero}']")
         funciones_2_0.screenShot(self, "Direccion")
         time.sleep(t2)
-
 
     def NombreApellido(self, Nombre):
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.NombreApellido, Nombre)
@@ -170,7 +170,8 @@ class telsur(funciones_2_0):
         funciones_2_0.validates(self, By.XPATH, ElementSeleccionServicios.IDValidateGTD)
 
     def AlmacenamientoId(self):
-        funciones_2_0.CrearDocumento(self, "ID-TELSUR-OPERACIONES", "ID-TELSUR", By.XPATH,ElementSeleccionServicios.IDValidateGTD)
+        funciones_2_0.CrearDocumento(self, "ID-TELSUR-OPERACIONES", "ID-TELSUR", By.XPATH,
+                                     ElementSeleccionServicios.IDValidateGTD)
         funciones_2_0.screenShot(self, "Captura-de-TV")
 
     def ContinuarServicioTV(self, ):
@@ -183,14 +184,15 @@ class telsur(funciones_2_0):
     def SuscripcionBoletaTelsur(self, Pago, Serie):
         funciones_2_0.click_Field(self, By.XPATH, f"//p[contains(.,'{Pago}')]")
         time.sleep(t)
-        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.Serie, Serie)
+        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.SerieBoleta, Serie)
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.AceptoTyC)
         time.sleep(t2)
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.ContinuarDatos)
         funciones_2_0.screenShot(self, "Confirmacion")
-        time.sleep(20)
+        time.sleep(30)
 
     def AlmacenamientoIdTelsur(self):
+        time.sleep(t)
         funciones_2_0.CrearDocumento(self, "ID-TELSUR-OPERACIONES", "ID-TELSUR", By.XPATH,
                                      ElementSeleccionServicios.IDValidateGTD)
         funciones_2_0.screenShot(self, "Captura-de-TV")

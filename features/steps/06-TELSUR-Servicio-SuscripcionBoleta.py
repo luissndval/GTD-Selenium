@@ -4,10 +4,9 @@ from Funciones.Funciones import funciones_2_0
 from pages.TELSURServicioPage import telsur
 
 
-@when(u'Confirmar contratacion del Servicio, Elegir metodo de Pago "{Pago}"  ingresar: "{Serie}".')
+@when(u' Confirmar contratacion del Servicio, Elegir metodo de Pago "{Pago}"  ingresar: "{Serie}".')
 def step_impl(context, Serie, Pago):
     try:
-        context.driver.refresh()
         telsur.SuscripcionBoletaTelsur(context, Pago, Serie)
     except:
         funciones_2_0.screenShot(context,

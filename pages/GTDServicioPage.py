@@ -9,9 +9,9 @@ from selenium.webdriver.support.wait import WebDriverWait
 from Funciones.Funciones import funciones_2_0
 from elements import ElementSeleccionServicios
 
-t = 5
-t2 = 10
-t3 = 15
+t = 3
+t2 = 5
+t3 = 10
 
 
 class SeleccionServicio(funciones_2_0):
@@ -23,7 +23,8 @@ class SeleccionServicio(funciones_2_0):
         funciones_2_0.driver_Chrome(self)
         # funciones_2_0.driver_Firefox(self)
         # funciones_2_0.driver_mobile(self)
-        funciones_2_0.browser(self, f"https://mcstaging.tienda.gtd.cl{Web}")
+        funciones_2_0.browser(self, f"https://mcstaging.tienda.gtd.cl/{Web}")
+        # funciones_2_0.browser(self, f"https://contratacion.gtd.cl{Web}")  #PRD <<<----||----<<<<<
         funciones_2_0.screenShot(self, "Navegador-Iniciado")
         time.sleep(t2)
 
@@ -114,10 +115,12 @@ class SeleccionServicio(funciones_2_0):
         funciones_2_0.click_Field(self, By.XPATH, f"//p[contains(.,'{Pago}')]")
         time.sleep(t)
         funciones_2_0.click_Field(self, By.XPATH, "//button[contains(.,'Entendido')]")
-        funciones_2_0.scrollToElement(self, By.XPATH, ElementSeleccionServicios.rut)
-        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.rut, Rut)
-        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.Serie, Serie)
+        time.sleep(3)
+        funciones_2_0.scrollToElement(self, By.XPATH, ElementSeleccionServicios.RutPatPass)
+        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.RutPatPass, Rut)
+        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.SeriePatPass, Serie)
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.AceptoTyC)
+        time.sleep(3)
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.ContinuarDatos)
         funciones_2_0.screenShot(self, "Confirmacion")
         time.sleep(15)
@@ -180,8 +183,8 @@ class SeleccionServicio(funciones_2_0):
     def SuscripcionBoletaGTD(self, Pago, Rut, Serie):
         funciones_2_0.click_Field(self, By.XPATH, f"//p[contains(.,'{Pago}')]")
         time.sleep(t2)
-        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.rut, Rut)
-        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.Serie, Serie)
+        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.rutBoleta, Rut)
+        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.SerieBoleta, Serie)
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.AceptoTyC)
         time.sleep(t2)
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.ContinuarDatos)

@@ -30,8 +30,8 @@ class funciones_2_0:
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
     def driver_Chrome(self):
-        # self.driver = webdriver.Chrome(ChromeDriverManager().install())
-        self.driver = webdriver.Chrome("\\..\\drivers\\chromedriver.exe")
+        self.driver = webdriver.Chrome(ChromeDriverManager().install())
+        # self.driver = webdriver.Chrome("\\..\\drivers\\chromedriver.exe")
 
     def driver_chrome_headless(self):
         options = webdriver.ChromeOptions()
@@ -48,6 +48,9 @@ class funciones_2_0:
         chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
         self.driver = webdriver.Chrome(chrome_options=chrome_options)
 
+
+
+
     ############################################################################################
     ################################## element_to_be_clickable##################################
     ############################################################################################
@@ -58,22 +61,22 @@ class funciones_2_0:
         print("Página abierta: " + str(link))
 
     def input_Texto(self, tipo, selector, texto):
-        WebDriverWait(self.driver, timeout=20).until(EC.visibility_of_element_located((tipo, selector))).send_keys(
+        WebDriverWait(self.driver, timeout=30).until(EC.visibility_of_element_located((tipo, selector))).send_keys(
             texto)
         time.sleep(1)
         print("\n Escribir en el campo {} el texto -> {} ".format(selector, texto))
 
     def click_Field(self, tipo, selector):
-        WebDriverWait(self.driver, timeout=20).until(EC.visibility_of_element_located((tipo, selector))).click()
+        WebDriverWait(self.driver, timeout=30).until(EC.visibility_of_element_located((tipo, selector))).click()
         time.sleep(2)
         print("\n Click sobre el elemento -> {} ".format(selector))
 
     def clear_Field(self, tipo, selector):
-        WebDriverWait(self.driver, timeout=20).until(EC.element_to_be_clickable((tipo, selector))).clear()
+        WebDriverWait(self.driver, timeout=30).until(EC.element_to_be_clickable((tipo, selector))).clear()
         print("\n Texto eliminado -> {} ".format(selector))
 
     def validates(self, tipo, selector):
-        element = WebDriverWait(self.driver, timeout=20).until(EC.presence_of_element_located((tipo, selector))).text
+        element = WebDriverWait(self.driver, timeout=30).until(EC.presence_of_element_located((tipo, selector))).text
         print(element)
         print("\n Elemento Validado -> {} ".format(selector))
 
