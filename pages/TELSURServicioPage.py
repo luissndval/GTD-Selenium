@@ -21,12 +21,8 @@ class telsur(funciones_2_0):
 
     def OpenBrowser(self, Web):
         funciones_2_0.driver_Chrome(self)
-        # funciones_2_0.driver_Firefox(self)
-        # funciones_2_0.driver_mobile(self)
-        funciones_2_0.browser(self, f"https://mcstaging.tienda.telsur.cl{Web}")
-        # funciones_2_0.browser(self, f"https://contratacion.telsur.cl{Web}")      #PRD <<<----||----<<<<<
+        funciones_2_0.browser(self, Web)
         funciones_2_0.screenShot(self, "Navegador-Iniciado")
-        time.sleep(t2)
 
     def InputSeleciconRegion(self, Region):
         funciones_2_0.input_Texto(self, By.XPATH, "//input[contains(@id,'region')]", Region)
@@ -37,19 +33,14 @@ class telsur(funciones_2_0):
 
     def SeleccionComuna(self, comuna):
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.Comuna, comuna, )
-        time.sleep(t)
         funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{comuna}']")
 
     def CalleyAlturaDepto(self, Calle, Numero, Depto):
-        time.sleep(t2)
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.Calle, Calle)
-        time.sleep(t2)
         funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{Calle}']")
-        time.sleep(t2)
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.NumeroCalle, Numero)
         funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{Numero}']")
         funciones_2_0.screenShot(self, "Direccion")
-        time.sleep(t2)
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.Depto, Depto)
         funciones_2_0.click_Field(self, By.XPATH, f"//div[@class='option element'][contains(.,'{Depto}')]")
 

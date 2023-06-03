@@ -61,22 +61,22 @@ class funciones_2_0:
         print("Página abierta: " + str(link))
 
     def input_Texto(self, tipo, selector, texto):
-        WebDriverWait(self.driver, timeout=30).until(EC.visibility_of_element_located((tipo, selector))).send_keys(
+        WebDriverWait(self.driver, timeout=60).until(EC.visibility_of_element_located((tipo, selector))).send_keys(
             texto)
         time.sleep(1)
         print("\n Escribir en el campo {} el texto -> {} ".format(selector, texto))
 
     def click_Field(self, tipo, selector):
-        WebDriverWait(self.driver, timeout=30).until(EC.visibility_of_element_located((tipo, selector))).click()
+        WebDriverWait(self.driver, timeout=60).until(EC.visibility_of_element_located((tipo, selector))).click()
         time.sleep(2)
         print("\n Click sobre el elemento -> {} ".format(selector))
 
     def clear_Field(self, tipo, selector):
-        WebDriverWait(self.driver, timeout=30).until(EC.element_to_be_clickable((tipo, selector))).clear()
+        WebDriverWait(self.driver, timeout=60).until(EC.element_to_be_clickable((tipo, selector))).clear()
         print("\n Texto eliminado -> {} ".format(selector))
 
     def validates(self, tipo, selector):
-        element = WebDriverWait(self.driver, timeout=30).until(EC.presence_of_element_located((tipo, selector))).text
+        element = WebDriverWait(self.driver, timeout=60).until(EC.presence_of_element_located((tipo, selector))).text
         print(element)
         print("\n Elemento Validado -> {} ".format(selector))
 
@@ -86,7 +86,7 @@ class funciones_2_0:
         print("\n Elemento Cargado -> {} ".format(selector))
 
     def scrollToElement(self, tipo, elemento):
-        val = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((tipo, elemento)))
+        val = WebDriverWait(self.driver, 60).until(EC.visibility_of_element_located((tipo, elemento)))
         self.driver.execute_script("arguments[0].scrollIntoView();", val)
         print("\n Desplazando al elemento -> {} ".format(elemento))
 
@@ -137,22 +137,22 @@ class funciones_2_0:
     ############################################################################################
 
     def input_Texto_visibility(self, tipo, selector, texto):
-        WebDriverWait(self.driver, timeout=20).until(EC.visibility_of_element_located((tipo, selector))).send_keys(
+        WebDriverWait(self.driver, timeout=60).until(EC.visibility_of_element_located((tipo, selector))).send_keys(
             texto)
         time.sleep(1)
         print("\n Escribir en el campo {} el texto -> {} ".format(selector, texto))
 
     def click_Field_visibility(self, tipo, selector):
-        WebDriverWait(self.driver, timeout=20).until(EC.visibility_of_element_located((tipo, selector))).click()
+        WebDriverWait(self.driver, timeout=60).until(EC.visibility_of_element_located((tipo, selector))).click()
         time.sleep(2)
         print("\n Click sobre el elemento -> {} ".format(selector))
 
     def clear_Field_visibility(self, tipo, selector):
-        WebDriverWait(self.driver, timeout=20).until(EC.visibility_of_element_located((tipo, selector))).clear()
+        WebDriverWait(self.driver, timeout=60).until(EC.visibility_of_element_located((tipo, selector))).clear()
         print("\n Texto eliminado -> {} ".format(selector))
 
     def validates_visibility(self, tipo, selector):
-        element = WebDriverWait(self.driver, timeout=20).until(
+        element = WebDriverWait(self.driver, timeout=60).until(
             EC.visibility_of_element_located((tipo, selector))).text
         print(element)
         print("\n Elemento Validado -> {} ".format(selector))
@@ -163,41 +163,13 @@ class funciones_2_0:
         print("\n Elemento Cargado -> {} ".format(selector))
 
     def scrollToElement_visibility(self, tipo, elemento):
-        val = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((tipo, elemento)))
+        val = WebDriverWait(self.driver, 60).until(EC.visibility_of_element_located((tipo, elemento)))
         self.driver.execute_script("arguments[0].scrollIntoView();", val)
         print("\n Desplazando al elemento -> {} ".format(elemento))
 
     def Iframe(self, tipo, selector):
         element = self.driver.find_element(tipo, selector)
         self.driver.switch_to.frame(element)
-
-    # def CrearDocumento(self, nombre_doc, nombre_columna, tipo, selector):
-    #     ruta_csv = "..\\txt\\{}.csv".format(nombre_doc)  # definir la ruta predefinida
-    #     elemento = WebDriverWait(self.driver, timeout=5).until(EC.visibility_of_element_located((tipo, selector))).text
-    #     valor_replace = elemento.replace('"', '').replace('\n', ' ')
-    #     print(valor_replace)
-    #     try:
-    #         if not os.path.exists(ruta_csv):
-    #             with open(ruta_csv, 'w', newline='') as csvfile:
-    #                 fieldnames = [nombre_columna]
-    #                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-    #                 writer.writeheader()
-    #                 writer.writerow({nombre_columna: valor_replace})
-    #         else:
-    #             with open(ruta_csv, 'a', newline='') as csvfile:
-    #                 fieldnames = [nombre_columna]
-    #                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-    #                 writer.writerow({nombre_columna: valor_replace})
-    #     except Exception as e:
-    #         print(f"Error al crear o escribir en el documento: {e}")
-    #
-    #     # Captura el texto del elemento con el xpath especificado
-    #     try:
-    #         elemento = WebDriverWait(self.driver, timeout=5).until(
-    #             EC.visibility_of_element_located((tipo, selector))).text
-    #     except Exception as e:
-    #         print(f"No se pudo encontrar el elemento con el xpath especificado: {e}")
-    #         return e
 
     def CrearDocumento(self, nombre_doc, nombre_columna, tipo, selector):
         # Obtener la ruta absoluta del archivo actual
@@ -235,4 +207,17 @@ class funciones_2_0:
                     writer.writerow({nombre_columna: valor_repleace})
         except Exception as e:
             print(f"Error al crear o escribir en el documento: {e}")
+
+
+    def Change_Ventana(self):
+        # Obtener todas las ventanas o pestañas abiertas
+        ventanas = self.driver.window_handles
+        # Cambiar al nuevo controlador de ventana (la pestaña recién abierta)
+        self.driver.switch_to.window(ventanas[1])
+
+    def new_window(self):
+        self.driver.execute_script("window.open('about:blank','_blank');")
+        handles = self.driver.window_handles
+        self.driver.switch_to.window(handles[2])
+        self.driver.get()
 

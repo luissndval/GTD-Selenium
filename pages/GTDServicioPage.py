@@ -9,9 +9,9 @@ from selenium.webdriver.support.wait import WebDriverWait
 from Funciones.Funciones import funciones_2_0
 from elements import ElementSeleccionServicios
 
-t = 3
-t2 = 5
-t3 = 10
+t = 5
+t2 = 10
+t3 = 15
 
 
 class SeleccionServicio(funciones_2_0):
@@ -23,8 +23,7 @@ class SeleccionServicio(funciones_2_0):
         funciones_2_0.driver_Chrome(self)
         # funciones_2_0.driver_Firefox(self)
         # funciones_2_0.driver_mobile(self)
-        funciones_2_0.browser(self, f"https://mcstaging.tienda.gtd.cl/{Web}")
-        # funciones_2_0.browser(self, f"https://contratacion.gtd.cl{Web}")  #PRD <<<----||----<<<<<
+        funciones_2_0.browser(self, Web)
         funciones_2_0.screenShot(self, "Navegador-Iniciado")
         time.sleep(t2)
 
