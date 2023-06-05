@@ -10,7 +10,7 @@ from Funciones.Funciones import funciones_2_0
 from elements import ElementSeleccionServicios
 
 t = 5
-t2 = 10
+t2 = 5
 t3 = 15
 
 
@@ -182,10 +182,10 @@ class SeleccionServicio(funciones_2_0):
     def SuscripcionBoletaGTD(self, Pago, Rut, Serie):
         funciones_2_0.click_Field(self, By.XPATH, f"//p[contains(.,'{Pago}')]")
         time.sleep(t2)
-        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.rutBoleta, Rut)
-        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.SerieBoleta, Serie)
+        funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.rut, Rut)
+        funciones_2_0.input_Texto(self, By.XPATH, "(//input[contains(@name,'1]')])[2]", Serie)
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.AceptoTyC)
-        time.sleep(t2)
+        time.sleep(t3)
         funciones_2_0.click_Field(self, By.XPATH, ElementSeleccionServicios.ContinuarDatos)
         funciones_2_0.screenShot(self, "Confirmacion")
         time.sleep(15)

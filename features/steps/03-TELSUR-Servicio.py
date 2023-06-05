@@ -21,7 +21,6 @@ def step_impl(context, Region):
     try:
         telsur.InputSeleciconRegion(context, Region)
     except:
-        funciones_2_0.screenShot(context, "Se selecciona region: '{Region}'")
         context.driver.close()
         assert True, "La prueba Fallo en: ----->>> Seleccione Region"
 
@@ -31,7 +30,7 @@ def step_impl(context, comuna):
     try:
         telsur.SeleccionComuna(context, comuna)
     except:
-        funciones_2_0.screenShot(context, "Se selecciona region: '{comuna}'")
+        funciones_2_0.screenShot(context, "Se selecciona region")
         context.driver.close()
         assert True, "La prueba Fallo en: ----->>> Seleccione Region"
 
@@ -126,7 +125,7 @@ def step_impl(context):
         assert False, "La prueba fallo en:  ----->>> Seleccionar fecha y horario"
 
 
-@when(u'Confirmar contratacion, Elegir metodo de Pago "{Pago}"  ingresar: "{Serie}".')
+@when(u'Confirmar contratacion del Servicio, Elegir metodo de Pago "{Pago}"  ingresar: "{Serie}".')
 def step_impl(context, Pago, Serie):
     try:
         telsur.ConfirmarContratacion(context, Pago, Serie)

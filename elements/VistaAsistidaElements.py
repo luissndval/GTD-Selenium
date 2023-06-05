@@ -31,8 +31,8 @@ Celular=	"//input[@data-msg-required='El teléfono ingresado no es válido.']"
 Email=	"//input[@id='email_hiring']"
 
 ValidarDatos=	"//p[contains(.,'Validar Datos')]"
-
-RutServicio = "//input[@id='rut']"
+RutServicio = "//label[@for='rut']//..//input"
+# RutServicio = "//input[@id='rut']"
 
 
 #####################SERVICIOS E INTERESES##########################

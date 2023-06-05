@@ -23,15 +23,18 @@ class telsur(funciones_2_0):
         funciones_2_0.driver_Chrome(self)
         funciones_2_0.browser(self, Web)
         funciones_2_0.screenShot(self, "Navegador-Iniciado")
+        time.sleep(5)
 
     def InputSeleciconRegion(self, Region):
         funciones_2_0.input_Texto(self, By.XPATH, "//input[contains(@id,'region')]", Region)
         funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{Region}']")
 
+
     # def selectRegion(self):
     #     fun.click_Field( By.XPATH, f"//div[text()='METROPOLITANAS']")
 
     def SeleccionComuna(self, comuna):
+        time.sleep(5)
         funciones_2_0.input_Texto(self, By.XPATH, ElementSeleccionServicios.Comuna, comuna, )
         funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{comuna}']")
 

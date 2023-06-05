@@ -46,6 +46,7 @@ class VentaAsistida(funciones_2_0):
         funciones_2_0.screenShot(self, "Hiring")
         funciones_2_0.click_Field(self, By.XPATH,
                                   f"//li/..//span[contains(.,'{PlanGenerate}')]//..//a[contains(.,'Generate Hiring')]")
+        funciones_2_0.screenShot(self, "Hiring")
 
     def Pestaña(self):
         funciones_2_0.Change_Ventana(self)
@@ -53,6 +54,7 @@ class VentaAsistida(funciones_2_0):
         time.sleep(5)
 
     def Formulario(self, Plataforma, Region, Comuna, Calle, Numero, Departamento, Nombre, Telefono, Correo, Rut):
+
         if Plataforma == "GTD":
             funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.Region, Region)
             funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{Region}']")
@@ -69,7 +71,9 @@ class VentaAsistida(funciones_2_0):
             funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.Numero, Numero)
             funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.Celular, Telefono)
             funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.Email, Correo)
+            funciones_2_0.screenShot(self, "Hiring")
             funciones_2_0.click_Field(self, By.XPATH, VistaAsistidaElements.ValidarDatos)
+
         else:
             funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.Region, Region)
             funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{Region}']")
@@ -87,6 +91,7 @@ class VentaAsistida(funciones_2_0):
             funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.Email, Correo)
             funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.RutServicio, Rut)
             funciones_2_0.screenShot(self, "Elementos Validados")
+            funciones_2_0.screenShot(self, "Hiring")
             funciones_2_0.click_Field(self, By.XPATH, VistaAsistidaElements.ValidarDatos)
 
     def SeleccionarCobertura(self, Cobertura):
@@ -134,13 +139,13 @@ class VentaAsistida(funciones_2_0):
             funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{Comuna}']")
             time.sleep(t2)
             funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.Calle, Calle)
-
             funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{Calle}']")
             funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.Numero, Numero)
             funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{Numero}']")
             funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.Nombre, Nombre)
             funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.Celular, Telefono)
             funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.Email, Correo)
+            funciones_2_0.screenShot(self, "Hiring")
             funciones_2_0.click_Field(self, By.XPATH, VistaAsistidaElements.ValidarDatos)
         else:
             funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.Region, Region)
@@ -153,16 +158,17 @@ class VentaAsistida(funciones_2_0):
             funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.Numero, Numero)
             funciones_2_0.click_Field(self, By.XPATH, f"//div[text()='{Numero}']")
             funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.Nombre, Nombre)
-            funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.Celular, Telefono)
+            funciones_2_0.input_Texto(self, By.XPATH, "(//input[@id='phone'])[2]", Telefono)
             funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.Email, Correo)
-            funciones_2_0.input_Texto(self, By.XPATH, VistaAsistidaElements.RutServicio, Rut)
+            funciones_2_0.click_Field(self, By.XPATH, "//label[@for='rut']//..//input")
+            funciones_2_0.input_Texto(self, By.XPATH, "//label[@for='rut']//..//input", Rut)
             funciones_2_0.screenShot(self, "Elementos Validados")
+            funciones_2_0.screenShot(self, "Hiring")
             funciones_2_0.click_Field(self, By.XPATH, VistaAsistidaElements.ValidarDatos)
     #
     def SendEmail(self):
         funciones_2_0.click_Field(self,By.XPATH, VistaAsistidaElements.EnviarLink)
-        time.sleep(10)
-
+        time.sleep(15)
         funciones_2_0.screenShot(self,"Status-Email")
 
     def GetText(self):

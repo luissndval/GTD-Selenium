@@ -5,64 +5,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1935dfbd-a7f1-47f6-9afb-1f0d5091bb90" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/elements/VistaAsistidaElements.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/05-Venta-Asisitida.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/steps/05-Venta-Asistida.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/VentaAsistidaPage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Funciones/Funciones.py" beforeDir="false" afterPath="$PROJECT_DIR$/Funciones/Funciones.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/01-GTD-Servicio-PATPASS.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/01-GTD-Servicio-PATPASS.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elements/VistaAsistidaElements.py" beforeDir="false" afterPath="$PROJECT_DIR$/elements/VistaAsistidaElements.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/02-GTD-Servicio-SuscipcionBoleta.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/02-GTD-Servicio-SuscipcionBoleta.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/03-TELSUR-Servicio-PATPASS.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/03-TELSUR-Servicio-PATPASS.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/04-TELSUR-Servicio-SuscripcionBoleta.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/04-TELSUR-Servicio-SuscripcionBoleta.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/01-GTD-Servicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/01-GTD-Servicio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/02-GTD-ServicioTV.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/03-GTD-Servicio-SuscipcionBoleta.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/02-GTD-Servicio-SuscipcionBoleta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/05-TELSUR-Servicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/03-TELSUR-Servicio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/06-TELSUR-Servicio-SuscripcionBoleta.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/04-TELSUR-Servicio-SuscripcionBoleta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/05-Venta-Asisitida.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/05-Venta-Asisitida.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/03-TELSUR-Servicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/03-TELSUR-Servicio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/04-TELSUR-Servicio-SuscripcionBoleta.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/04-TELSUR-Servicio-SuscripcionBoleta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/05-Venta-Asistida.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/05-Venta-Asistida.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/GTDServicioPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/GTDServicioPage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/TELSURServicioPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/TELSURServicioPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/00e6e9db-4cfc-4fc2-ad61-55b2ee2280db-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/120a58b0-8917-444b-9296-4b5b5712693e-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/1661502f-99f0-4afe-b5fa-e28d1744cd5a-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/16de8cfb-b18d-40f5-9bbb-75de081134e1-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/19cb4a5d-1328-42cf-a83c-4dcb0c7d1608-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/1af8b2f8-bfbc-44b5-ba19-e3b5542fe351-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/1c051296-5616-4149-814c-02b172ce32f9-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/1e8397c3-4f84-4e6c-ad3d-61c214be7f10-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/23db0c1c-0af7-4269-a795-f990cad09190-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/32d718e4-c74a-4443-ab10-97f6f812039b-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/33d058b2-3ed5-4a70-8e3b-ac3a37754fdf-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/377b5329-d1a9-4ccd-81d4-f5717e9304e0-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/47180801-9da2-454e-987b-f81421bcba8b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/60c88546-5496-4778-b39d-dd641e6ecd41-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/7ec83b8c-b714-4592-9569-ff4cacd0801a-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/837c5fff-d4f6-482b-af1a-32160e0e2e28-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/8dd70267-a249-444b-b71a-4bd371153d58-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/90c3e49a-0d5d-4f11-9b56-e7e187e3e82e-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/985c8326-4a04-4792-a5f2-e08be6b5c0cf-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/9d91add2-136b-4a8c-bee9-6e4bce10ce0a-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/9e5d40fc-e3b3-44bd-b33b-04d510a6bb00-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/ace1bd52-4176-4214-904c-1f5a5bbf51fa-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/ae3fd547-8bd6-4c8a-82fb-6cf2c2276d92-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/b0d8ea09-034f-4e1c-a0d8-7a2cf979bcf7-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/b67372ea-48ac-4f28-ba8a-9a1e4e605a58-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/b86e215d-8711-44ed-a02a-0977ad2b215f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/c1363c92-0825-43e4-bd94-ef84f6fa1cb7-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/c6c0d7ea-e69c-4f43-b83a-520c813ab89c-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/c9ec2fcb-ceb3-4c20-ab88-5820e07d7b36-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/ca871394-e4a5-4cfe-aaf5-6b46de5fdbb1-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/d053aaf3-51b3-4145-bc81-2c2357f631c4-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/dfd5086c-35ef-488d-93fd-1e7ed81f56cb-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/e2f954f5-e8ac-493e-8f87-b13ad8359162-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/e6582f91-ec71-4e99-90c5-28efc42a8316-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/e69cfcd4-92f8-4386-84d7-fb641ec77a37-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/e717a441-a03f-4713-a923-4f36971923df-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/e80bd05f-2e80-4be0-8db9-b45e2aef9c2d-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/e97916d9-6fd7-47fd-8437-0c1cb72c75ff-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/f8a161d9-c694-4d87-9d64-3fd6794dde7c-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/fb99cebb-a370-4058-b0da-f34216ef1c29-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/fc5befb6-14f9-4049-be93-9bedb622cf72-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/VentaAsistidaPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/VentaAsistidaPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/01dead5e-5279-40a3-9cea-21d55d859e78-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/07e91220-0892-4515-948f-e658b9a5bef4-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/0fb43b91-7e38-4daf-b4b1-aa06a0a5c87f-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/18308269-5761-43a3-8556-4181d1415f59-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/18ced8bf-20a8-44f1-b476-f6759b2c74bd-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/1a8706c7-0791-4ebb-8f2c-048628fbe2aa-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/1ff6c6f2-374e-4cda-9869-ed25f7a8f4b7-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/37e967c4-5799-4533-bff1-a325c8f38c01-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/3de06475-4dd9-4bf8-99fd-d679584f7fe4-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/3e0cb954-2fd1-48ac-b7e1-2a1e3e7c96d7-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/40dd8d9d-5c9e-4003-9ebf-17a5bd128cc2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/4c051e1d-94d6-4a43-9fea-f7e5ec1d17bd-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/50b2931d-7144-47e2-8320-80f82174f1e5-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/52507788-2897-44ad-8e98-83e655ef1ee5-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/52642b9f-c99f-4a72-95db-98ea99dd1fc7-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/53a67557-1796-4d8c-8141-b9ee60068dde-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/55cc95a8-d565-4ece-a9af-8297596d5e02-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/60659f27-a932-4fa1-bea9-b97ca321339d-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/62b270ce-0bc0-492e-908c-c2ae12543927-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/65e7c510-b4e0-4b6f-8f39-197ee3b68136-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/6781f171-a420-4ae1-9ce9-c1fd0e8ec8b2-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/6fdac649-6eec-49c6-9c9a-f54a9fc865ae-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/700386f2-8d84-4e77-b1b1-f365afc667a6-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/72838ea3-d017-4b14-a85a-0c968fe53269-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/7c238856-f9ae-4222-b37f-37d9c3cce16d-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/7d9bc922-fccc-43d2-a43b-96c6dcc7f3c7-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/82e58c2a-649b-467a-9a08-f4480c37d695-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/8b001767-8871-467c-b517-57b4e281e014-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/945cff9b-f4ff-47ad-8322-16450cd0e1a6-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/95f247ad-5209-4106-84c5-0587306cb225-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/95fe6dc4-d190-4af7-b99d-b2018ba7f4aa-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/a18d0be6-48e5-4044-b629-fda9c6787e13-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/a380a8d1-f254-4d99-aa50-f403c55bc4a4-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/a869388e-ff18-40b7-8c4c-547f8bd4cb30-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/a9d566b1-bc90-4d80-9530-1d7e5d6685c5-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/ad32adbe-cdbe-47e5-a5a7-f281a6dc9960-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/ad823764-7365-4972-b058-ab0eaa8e56d0-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/b90c2008-3948-4145-989e-c2f8649b2267-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/ba1183f9-af67-42f2-a6e7-3f076278684c-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/be49ac8c-9f8e-4f31-b478-ffc895859ec3-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/c2147c85-b18d-4df0-bf23-2592df4d30c5-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/c52e2aa0-943d-4591-a1ec-f0855322de10-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/c7a4a57d-bd9c-4060-8529-3ba9d750aaca-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/ccd12d03-e248-4be2-9b64-fdcede57a037-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/d1bf8d86-9ae9-45f5-8e5f-101e4224b3b6-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/d3996db4-3e1b-4c19-a9ee-6297f1767f7e-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/d6257a54-baa5-4806-920d-2892039f8d9a-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/d732f567-e564-4e1c-beee-72e32bdd31a0-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/d7c237c1-3ca1-4b83-a520-f3317f5bce1e-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/da5219f9-e450-438a-9abd-d3860da2a15d-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/dc2fa56b-c342-4845-8095-282eca565f50-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/e3b1bff5-780b-48a0-92ff-193b5e176c19-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/e3d23344-8d73-43cc-8ad4-dbfe4b70dd75-result.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,6 +199,96 @@
           <url>file://$PROJECT_DIR$/pages/GTDServicioPage.py</url>
           <line>123</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/features/steps/05-Venta-Asistida.py</url>
+          <line>110</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/features/steps/05-Venta-Asistida.py</url>
+          <line>111</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/features/steps/05-Venta-Asistida.py</url>
+          <line>113</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/features/steps/05-Venta-Asistida.py</url>
+          <line>115</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/features/steps/05-Venta-Asistida.py</url>
+          <line>116</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/features/steps/05-Venta-Asistida.py</url>
+          <line>109</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pages/GTDServicioPage.py</url>
+          <line>181</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pages/GTDServicioPage.py</url>
+          <line>182</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pages/GTDServicioPage.py</url>
+          <line>183</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pages/GTDServicioPage.py</url>
+          <line>184</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pages/GTDServicioPage.py</url>
+          <line>185</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pages/GTDServicioPage.py</url>
+          <line>186</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pages/GTDServicioPage.py</url>
+          <line>187</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pages/GTDServicioPage.py</url>
+          <line>188</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pages/GTDServicioPage.py</url>
+          <line>189</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/features/steps/05-Venta-Asistida.py</url>
+          <line>112</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/features/steps/05-Venta-Asistida.py</url>
+          <line>114</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/features/steps/01-GTD-Servicio.py</url>
+          <line>123</line>
+          <option name="timeStamp" value="88" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

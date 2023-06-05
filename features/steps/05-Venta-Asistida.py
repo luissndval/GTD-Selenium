@@ -109,12 +109,12 @@ def step_impl(context):
 def step_impl(context):
     try:
         VentaAsistida.SendEmail(context)
-        validador=WebDriverWait(context.driver, timeout=60).until(EC.presence_of_element_located((By.XPATH, "//small[text()='Error al intentar enviar']"))).text
-        if validador=="Error al intentar enviar":
-            context.driver.close()
-        else:
+        validador= context.driver.find_element(By.XPATH, "//small[@data-bind='text: successMsg']").text
+        print(validador)
+        if validador=="Enviado":
             VentaAsistida.GetText(context)
-        context.driver.close()
+        else:
+            context.driver.close()
     except:
         context.driver.close()
         assert False, "FALLO EN:  Fecha y horario Disponible"
